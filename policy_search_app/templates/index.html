@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Quantum Policy Search</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <style>
+        /* Minimal local styles in case styles.css is missing */
+        body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:#f7f9fb; color:#111; margin:0; padding:24px; }
+        .container{max-width:980px;margin:0 auto;background:#fff;padding:20px;border-radius:8px;box-shadow:0 6px 18px rgba(20,30,50,0.06)}
+        form{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+        input[type=text]{flex:1;padding:10px;border:1px solid #d6dbe6;border-radius:6px}
+        input[type=number]{width:110px;padding:10px;border:1px solid #d6dbe6;border-radius:6px}
+        button{background:#0066cc;color:#fff;border:none;padding:10px 16px;border-radius:6px;cursor:pointer}
+        button:disabled{opacity:0.6;cursor:default}
+        .results{display:flex;flex-direction:column;gap:12px}
+        .policy-card{padding:12px;border:1px solid #eef1f6;border-radius:6px;background:#fcfeff}
+        .meta{color:#3b4a63;font-size:13px;margin-bottom:8px}
+        .score{font-weight:600;color:#0b66c3}
+        .small{font-size:13px;color:#556677}
+        .error{color:#b00020}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Quantum Policy Search</h1>
+
+        <form id="searchForm">
+            <input id="queryInput" type="text" name="query" placeholder="Enter query (title, keywords, or snippet)" required />
+            <input id="topNInput" type="number" name="top_n" min="1" max="20" value="3" placeholder="Top N" title="Number of top results to return" required aria-label="top results" />
+            <button id="searchBtn" type="submit">Search</button>
+        </form>
+
+        <div id="status" role="status" aria-live="polite"></div>
+
+        <div id="results" class="results" aria-live="polite"></div>
+    </div>
+
+    <script>
+        const form = document.getElementById('searchForm');
+        const queryInput = document.getElementById('queryInput');
+        const topNInput = document.getElementById('topNInput');
+        const resultsEl = document.getElementById('results');
+        const statusEl = document.getElementById('status');
+        const searchBtn = document.getElementById('searchBtn');
+
+        function renderPolicy(p){
+            const card = document.createElement('div');
+            card.className = 'policy-card';
+
+            const title = document.createElement('h3');
+            title.textContent = p.title || 'Untitled policy';
+            card.appendChild(title);
+
+            const meta = document.createElement('div');
+            meta.className = 'meta';
+            meta.innerHTML = `<span class="small"><b>Policy ID:</b> ${p.policy_id || ''}</span> &nbsp;|&nbsp; <span class="small"><b>Sector:</b> ${p.sector || ''}</span> &nbsp;|&nbsp; <span class="small"><b>Region:</b> ${p.region || ''}</span> &nbsp;|&nbsp; <span class="small"><b>Year:</b> ${p.year || ''}</span>`;
+            card.appendChild(meta);
+
+            const scores = document.createElement('p');
+            scores.innerHTML = `<span class="score">Similarity: ${p.similarity_score ?? ''}</span> &nbsp;|&nbsp; <span class="small">Impact Score: ${p.impactscore ?? ''}</span>`;
+            card.appendChild(scores);
+
+            if(p.summary){
+                const sum = document.createElement('p');
+                sum.innerHTML = `<b>Summary:</b> ${p.summary}`;
+                card.appendChild(sum);
+            }
+
+            if(p.goals){
+                const goals = document.createElement('p');
+                goals.innerHTML = `<b>Goals:</b> ${p.goals}`;
+                card.appendChild(goals);
+            }
+
+            return card;
+        }
+
+        async function doSearch(q, top_n){
+            resultsEl.innerHTML = '';
+            statusEl.textContent = '';
+            searchBtn.disabled = true;
+            statusEl.textContent = 'Searching...';
+
+            try{
+                const resp = await fetch('/quantum_search', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ query: q, top_n: Number(top_n) })
+                });
+
+                let data;
+                if(!resp.ok){
+                    // Try to parse JSON error body (e.g., 503 with { error: '...' })
+                    let bodyText = '';
+                    try{ const json = await resp.json(); bodyText = json.error || JSON.stringify(json); }catch(e){ bodyText = await resp.text(); }
+                    throw new Error(`${resp.status} ${resp.statusText}: ${bodyText}`);
+                }else{
+                    data = await resp.json();
+                }
+
+                if(!data.top_policies || data.top_policies.length === 0){
+                    statusEl.innerHTML = '<span class="small">No results found.</span>';
+                    return;
+                }
+
+                statusEl.innerHTML = `<span class="small">Top ${data.top_policies.length} results for "${q}"</span>`;
+
+                for(const p of data.top_policies){
+                    resultsEl.appendChild(renderPolicy(p));
+                }
+
+            }catch(err){
+                console.error(err);
+                statusEl.innerHTML = `<span class="error">Error: ${err.message}</span>`;
+            }finally{
+                searchBtn.disabled = false;
+            }
+        }
+
+        form.addEventListener('submit', (e)=>{
+            e.preventDefault();
+            const q = queryInput.value.trim();
+            const top_n = topNInput.value;
+            if(!q) return;
+            doSearch(q, top_n);
+        });
+
+        // Optional: allow pressing Enter on the page to trigger a search when focused
+        queryInput.addEventListener('keydown', (e)=>{
+            if(e.key === 'Enter' && !e.shiftKey){
+                e.preventDefault();
+                form.dispatchEvent(new Event('submit', {cancelable:true}));
+            }
+        });
+    </script>
+</body>
+</html>

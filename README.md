@@ -1,5 +1,3 @@
-# Quantum_Education_Policy 
-
 <div align="center">
 
 # ⚛️ Quantum_Education_Policy  

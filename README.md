@@ -221,14 +221,6 @@ You’ll see a sleek web UI where you can enter education-related queries like:
 
 ## 👨‍💻 Author
 
-<<<<<<< HEAD
-**Pradeesh V**
-🎓 B.Tech. Computer Science and Engineering(Data Science)
-💼 Machine Learning Intern | NLP Developer | Quantum Computing Enthusiast
-
-📧 *Contact:* [pradeeshvasu22@gmail.com]
-🌐 *Portfolio:* [https://github.com/PradeeshVasu]
-=======
 **Pradeesh Vasu**
 🎓 B.Tech. Computer Science and Engineering(Data Science)                                    
 💼 Machine Learning Intern | NLP Developer | Quantum Computing Enthusiast
@@ -236,7 +228,7 @@ You’ll see a sleek web UI where you can enter education-related queries like:
 📧 *E-mail id:* [pradeeshvasu22@gmail.com]                    
 🌐 *github:* [https://github.com/PradeeshVasu]              
 💼 *LinkedIn:* [linkedin.com/in/pradeesh-vasu-03486b319](https://www.linkedin.com/in/pradeesh-vasu-03486b319) 
->>>>>>> 2aa4f93e14b565b83e62262bc430c93d31751d7f
+
 
 ---
 
@@ -249,13 +241,4 @@ Licensed under the **MIT License** — you are free to use, modify, and distribu
 <div align="center">
 
 > *“Bridging Classical AI and Quantum Computing to shape better education policy intelligence.”*
-<<<<<<< HEAD
 
-</div>
-
-
-=======
-
-</div>
-
->>>>>>> 2aa4f93e14b565b83e62262bc430c93d31751d7f

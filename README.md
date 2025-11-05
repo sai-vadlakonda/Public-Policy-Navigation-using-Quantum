@@ -222,12 +222,16 @@ You’ll see a sleek web UI where you can enter education-related queries like:
 ## 👨‍💻 Author
 
 **Pradeesh Vasu**
-🎓 B.Tech. Computer Science and Engineering(Data Science)                                    
-💼 Machine Learning Intern | NLP Developer | Quantum Computing Enthusiast
-
 📧 *E-mail id:* [pradeeshvasu22@gmail.com]                    
 🌐 *github:* [https://github.com/PradeeshVasu]              
-💼 *LinkedIn:* [linkedin.com/in/pradeesh-vasu-03486b319](https://www.linkedin.com/in/pradeesh-vasu-03486b319) 
+💼 *LinkedIn:* [linkedin.com/in/pradeesh-vasu-03486b319](https://www.linkedin.com/in/pradeesh-vasu-03486b319)
+**Sai Vadalakonda**
+**Sai Surya**
+**Ekta Sharma **
+**Pavan Kumar**
+
+
+ 
 
 
 ---

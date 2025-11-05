@@ -225,7 +225,10 @@ You’ll see a sleek web UI where you can enter education-related queries like:
 📧 *E-mail id:* [pradeeshvasu22@gmail.com]                              
 🌐 *github:* [https://github.com/PradeeshVasu]                              
 💼 *LinkedIn:* [linkedin.com/in/pradeesh-vasu-03486b319](https://www.linkedin.com/in/pradeesh-vasu-03486b319)                            
-**Sai Vadalakonda**                      
+**Sai Vadalakonda** 
+📧 *E-mail id:* [sai2592004@gmail.com]
+🌐 *github:* [https://github.com/sai-vadlakonda]
+💼 *LinkedIn:* [https://www.linkedin.com/in/sai-vadlakonda/]
 **Sai Surya**                        
 **Ekta Sharma**                        
 **Pavan Kumar**                                      

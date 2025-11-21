@@ -193,7 +193,6 @@ You’ll see a sleek web UI where you can enter education-related queries like:
 * 📈 Dynamic pie and bar charts via Chart.js
 * 💡 Responsive design for desktop and mobile
 
-*(You can add a screenshot here later, e.g., `/static/screenshot.png`)*
 
 ---
 

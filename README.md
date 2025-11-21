@@ -230,7 +230,10 @@ You’ll see a sleek web UI where you can enter education-related queries like:
 🌐 *github:* [https://github.com/sai-vadlakonda]                  
 💼 *LinkedIn:* [https://www.linkedin.com/in/sai-vadlakonda/]                              
 **Sai Surya**                        
-**Ekta Sharma**                        
+**Ekta Sharma**  
+📧 *E-mail id:* [ektasharma4462@gmail.com]                              
+🌐 *github:* [https://github.com/ekta-240]                             
+💼 *LinkedIn:*     [https://www.linkedin.com/in/ekta--sharma24/]                 
 **Pavan Kumar**                                      
 
 

@@ -231,7 +231,7 @@ You’ll see a sleek web UI where you can enter education-related queries like:
 🌐 *github:* [https://github.com/sai-vadlakonda]                  
 💼 *LinkedIn:* [https://www.linkedin.com/in/sai-vadlakonda/]   
 
-***Sai Surya**  
+**Sai Surya**  
 📧 *E-mail id:* [sa.ryaa004@gmail.com]                 
 🌐 *github:* [https://github.com/Sayaan-cloud?tab=repositories]             
 💼 *LinkedIn:* [https://www.linkedin.com/in/sai-surya-663b052b8/]

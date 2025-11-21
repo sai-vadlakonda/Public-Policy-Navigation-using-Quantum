@@ -241,11 +241,10 @@ You’ll see a sleek web UI where you can enter education-related queries like:
 🌐 *github:* [https://github.com/ekta-240]                             
 💼 *LinkedIn:*     [https://www.linkedin.com/in/ekta--sharma24/]   
 
-**Pavan Kumar**                                      
-
-
- 
-
+**Pavan Kumar**  
+📧 *E-mail id:* [pavankumarbushigampala@gmail.com]                              
+🌐 *github:* [https://github.com/Pavan-244]                              
+💼 *LinkedIn:* [linkedin.com/in/pavan244](https://www.linkedin.com/in/pavan244/)
 
 ---
 

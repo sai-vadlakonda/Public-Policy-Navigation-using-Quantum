@@ -224,16 +224,23 @@ You’ll see a sleek web UI where you can enter education-related queries like:
 **Pradeesh Vasu**          
 📧 *E-mail id:* [pradeeshvasu22@gmail.com]                              
 🌐 *github:* [https://github.com/PradeeshVasu]                              
-💼 *LinkedIn:* [linkedin.com/in/pradeesh-vasu-03486b319](https://www.linkedin.com/in/pradeesh-vasu-03486b319)                            
+💼 *LinkedIn:* [linkedin.com/in/pradeesh-vasu-03486b319](https://www.linkedin.com/in/pradeesh-vasu-03486b319)  
+
 **Sai Vadalakonda**                     
 📧 *E-mail id:* [sai2592004@gmail.com]            
 🌐 *github:* [https://github.com/sai-vadlakonda]                  
-💼 *LinkedIn:* [https://www.linkedin.com/in/sai-vadlakonda/]                              
-**Sai Surya**                        
+💼 *LinkedIn:* [https://www.linkedin.com/in/sai-vadlakonda/]   
+
+***Sai Surya**  
+📧 *E-mail id:* [sa.ryaa004@gmail.com]                 
+🌐 *github:* [https://github.com/Sayaan-cloud?tab=repositories]             
+💼 *LinkedIn:* [https://www.linkedin.com/in/sai-surya-663b052b8/]
+                        
 **Ekta Sharma**  
 📧 *E-mail id:* [ektasharma4462@gmail.com]                              
 🌐 *github:* [https://github.com/ekta-240]                             
-💼 *LinkedIn:*     [https://www.linkedin.com/in/ekta--sharma24/]                 
+💼 *LinkedIn:*     [https://www.linkedin.com/in/ekta--sharma24/]   
+
 **Pavan Kumar**                                      
 
 
